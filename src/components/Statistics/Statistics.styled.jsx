@@ -1,15 +1,15 @@
 import styled from '@emotion/styled';
 
-export const statistics = styled.section`
-
+export const Section = styled.section`
+background-color: #fff;
 `;
 
-export const title = styled.h2``;
+export const Title = styled.h2``;
 
-export const statList = styled.ul``;
+export const StatList = styled.ul``;
 
-export const item = styled.li``;
+export const Item = styled.li``;
 
-export const label = styled.span``;
+export const Label = styled.span``;
 
-export const percentage = styled.span``;
+export const Percentage = styled.span``;

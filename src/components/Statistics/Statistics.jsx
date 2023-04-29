@@ -1,14 +1,15 @@
 import Stat from 'components/Statistics/Stat/Stat'
+import { Section, Title } from './Statistics.styled'
 
 export default function Statistics({ title, stats }) {
     const statistics =
-        <section>
-            <h2>{title && title}</h2>
+        <Section>
+            <Title>{title && title}</Title>
             <ul>
                 {stats.map((stat) => {
-                    return <Stat props={stat} />
+                    return <Stat key={stat.id} label={stat.label} percentage={stat.percentage} />
                 })}
             </ul>
-        </section>;
+        </Section>;
     return statistics;
 }

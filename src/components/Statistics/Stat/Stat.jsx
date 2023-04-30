@@ -1,12 +1,12 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { Item, Label, Percentage } from './Stat.styled'
 
-export default function Stat({ label, percentage }) {
-
+export default function Stat({ label, percentage, color, numSim }) {
     const stat =
-        <li>
-            <span>{label}</span>
-            <span>{percentage}%</span>
-        </li>;
+        <Item color={color} numSim={numSim}>
+            <Label>{label} </Label>
+            <Percentage>{percentage}%</Percentage>
+        </Item>;
     return stat;
 }
 
@@ -15,3 +15,4 @@ Stat.protoTypes = {
     label: PropTypes.string,
     percentage: PropTypes.number,
 }
+

@@ -15,7 +15,7 @@ function App() {
   return (
     <Container>
       <Profile username={userData.username} tag={userData.tag} location={userData.location} avatar={userData.avatar} stats={userData.stats} />
-      {nameStatisticsProfile && <Statistics title={nameStatisticsProfile} stats={statisticData} />}
+      <Statistics title={nameStatisticsProfile} stats={statisticData} />
       <FriendList friends={friends} />
       <TransactionHistory transactions={transactions} />
     </Container>

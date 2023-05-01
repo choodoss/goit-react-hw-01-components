@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export default function Statistics({ title, stats }) {
     const statistics =
         <Section>
-            <Title>{title}</Title>
+            {title && <Title>{title}</Title>}
             <StatList>
                 {stats.map((stat) => {
                     return <Stat key={stat.id} label={stat.label} percentage={stat.percentage} numSim={stats.length} color={getRandomColor()} />

@@ -9,13 +9,13 @@ import TransactionHistory from 'components/TransactionHistory/TransactionHistory
 import transactions from 'data/transactions.json'
 
 
-const nameStatisticsProfile = 'upload stats';
+const nameStatisticsProfile = 'upload stts'; // ця змінна для імітації, що з бекенду може не прийти значення + для тестування, чи буде рендеритись розмітка.
 
 function App() {
   return (
     <Container>
       <Profile username={userData.username} tag={userData.tag} location={userData.location} avatar={userData.avatar} stats={userData.stats} />
-      <Statistics title={nameStatisticsProfile} stats={statisticData} />
+      {nameStatisticsProfile && <Statistics title={nameStatisticsProfile} stats={statisticData} />}
       <FriendList friends={friends} />
       <TransactionHistory transactions={transactions} />
     </Container>
